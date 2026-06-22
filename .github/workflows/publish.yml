@@ -11,7 +11,7 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       # Ingen registry-url: den får setup-node att skriva en .npmrc med
       # _authToken-platshållare, vilket gör att npm försöker token-auth i
