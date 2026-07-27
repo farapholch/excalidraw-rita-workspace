@@ -21,6 +21,10 @@ updates:
       # Ignore major @types/node updates - too risky for auto-merge
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-major"]
+      # Stay on TypeScript 5.x: 6.x/7.x (native port) is not yet supported
+      # by typescript-eslint and rollup-plugin-dts (breaks lint + dts build)
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
